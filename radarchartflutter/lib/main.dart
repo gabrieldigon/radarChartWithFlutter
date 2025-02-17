@@ -12,9 +12,9 @@ class MyApp extends StatelessWidget {
     0, // science exploration
     0, // self regulation
     0, // critical thinking
-    1, // childHood literacy
-    1, // love and kindnesse
-    0.4 // soft skills
+    0.6, // childHood literacy
+    0.3, // love and kindnesse
+    0.1 // soft skills
   ];
   static const List<double> criancaGOAT = [
     1, // science exploration
@@ -34,12 +34,12 @@ class MyApp extends StatelessWidget {
   ];
 
   static const List<double> criancaAmorosa = [
-    0, // science exploration
-    0, // self regulation
-    0, // critical thinking
-    0, // childHood literacy
-    1, // love and kindnesse
-    0 // soft skills
+    0.2, // science exploration
+    0.1, // self regulation
+    0.1, // critical thinking
+    0.1, // childHood literacy
+    0.1, // love and kindnesse
+    0.8 // soft skills
   ];
   static const List<double> criancaExemploReal = [
     0.0987, //science exploration
@@ -63,14 +63,14 @@ class MyApp extends StatelessWidget {
                 painter: RegularHexagonPainter(strokeThickness: 15),
               ),
               CustomPaint(
-                size: const Size(240, 240),
+                size: const Size(305, 305),
                 painter: InnerHexagonPainter(
                     fillColor: const Color.fromARGB(255, 160, 189, 214),
                     childrenStats: criancaEscolhida,
                     paintingStyle: PaintingStyle.stroke),
               ),
               CustomPaint(
-                size: const Size(235, 235),
+                size: const Size(300, 300),
                 painter: InnerHexagonPainter(
                     fillColor: const Color.fromARGB(210, 206, 230, 250),
                     childrenStats: criancaEscolhida,
@@ -109,8 +109,7 @@ class RegularHexagonPainter extends CustomPainter {
     double radius = w / 2;
 
     for (int i = 0; i < 6; i++) {
-      double angle = pi / 3 * i +
-          pi / 6; // esse pi/6 é só pra rodar ele e ficar igual o do app;
+      double angle = pi / 3 * i + pi / 6;
       double x = centerX + radius * cos(angle);
       double y = centerY + radius * sin(angle);
       if (i == 0) {
@@ -208,7 +207,6 @@ Criança exemplo
   love and kindness 0.5555
   soft skills 0.1851
 
-  //lembrar que o exemplo do grafico de barras n ta certo na screenshot do app
   //nem sempre esse grafico vai ser bom pra mostrar esses dados
 
 */
